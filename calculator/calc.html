@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage calculator</title>
+    <link rel="stylesheet" href="css/styles.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="calc">
+            <div class="calc__choose">
+                <div class="calc__choose-title">Select bank:</div>
+                <select id="select">
+                </select>
+            </div>
+            <div class="calc__inputs">
+                <label>Initial loan ($)
+              <input type="text" class="initial_loan">
+              </label>
+                <label>Down payment ($)
+                <input type="text" class="down_payment">
+              </label>
+            </div>
+            <div class="calc__button">
+                <button id="calculate">Calculate</button>
+            </div>
+            <div class="calc__results" id="calc__results"></div>
+        </div>
+        <div class="errors">
+
+        </div>
+    </div>
+
+    <script src="js/calc.js"></script>
+</body>
+
+</html>

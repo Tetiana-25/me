@@ -1,0 +1,197 @@
+*
+  margin: 0
+  padding: 0
+.container
+  position: relative
+  display: block
+  width: 1000px
+  margin: 0 auto
+.bank__block
+  display: block
+  height: 300px
+  width: 300px
+  margin-top: 50px
+  background: #1D4A4A
+  border-radius: 52px
+  box-shadow: 10px 4px 4px rgba(108, 106, 88, 0.38)
+  &:not(:last-child)
+    margin-right: 20px
+.banks
+  display: flex
+  flex-wrap: wrap
+img
+  width: 20px
+  height: 20px
+  cursor: pointer
+  margin-left: 20px
+.images
+  display: flex
+  justify-content: flex-end
+  position: relative
+  img.delete
+    position: absolute
+    top: 10px
+    right: 30px 
+  img.edit
+    position: absolute
+    top: 10px
+    right: 80px 
+    color: white
+    
+.add
+  margin-top: 20px
+  display: flex
+  border: 1px solid black
+  border-radius: 10px
+  width: 300px
+  height: 50px
+  padding-left: 20px
+  &__title
+    font-size: 30px
+    margin-top: 10px
+  &__img
+    width: 30px
+    height: 30px
+    margin-top: 12px
+  &:hover
+    background-color: #1D4A4A
+    color: white
+
+#calculator
+  position: absolute
+  top: 0
+  right: 0
+  margin: 0
+  border: 1px solid #000000
+  border-radius: 10px
+  background-color: #FFFFFF
+  &:hover
+    background-color: #1D4A4A
+    color: #FFFFFF
+.calc
+  display: block
+  margin: 90px auto
+  padding: 50px
+  width: 500px
+  border: 1px solid #1D4A4A
+  border-radius: 10px
+  &__inputs
+    display: flex
+    flex-direction: column
+    width: 500px
+    height: 100px
+    align-items: end
+    font-size: 25px
+    input
+      margin-top: 20px
+      font-size: 20px
+  &__choose
+    display: flex
+    flex-direction: column
+    width: 500px
+    font-size: 25px
+    #select
+      height: 50px
+      font-size: 24px
+      background-color: #1D4A4A
+      color: #FFFFFF
+  &__button
+    display: block
+    margin: 0 auto
+    width: 500px
+    #calculate
+      width: 500px
+      &:hover
+        background-color: #FFD600
+  &__results
+    display: block
+    width: 500px
+    height: 80px
+    color: red
+    margin-top: 50px
+    text-align: center
+    font-size: 25px
+    font-weight: bold
+
+    
+        
+.bank__name, .bank__interestRate, .bank__maxLoan,.bank__minDownPayment, .bank__loanTerm
+  display: flex
+  color: #FFFFFF
+  font-size: 15px
+  justify-content: center
+  margin-top: 10px
+  align-items: center
+    
+.bank__name
+  display: block
+  margin-top: 50px
+  text-align: center
+  .templ_name
+    font-size: 35px
+    text-decoration: underline
+
+.templ_interestRate,.templ_name,.templ_maxLoan,.templ_minDownPayment,.templ_loanTerm
+  margin-left: 10px
+  font-size: 25px
+  font-weight: bold
+
+
+.modal_edit
+  position: absolute
+  display: none
+  width: 500px
+  height: 500px
+  background-color: #28501E
+  color: #FFFFFF
+  border-radius: 10px
+  border: 1px solid #FFFFFF
+  box-shadow: 10px 4px 4px rgba(108, 106, 88, 0.38);
+  top: 100px
+  left: 300px
+
+.modal_add
+  position: absolute
+  top: 100px
+  left: 300px
+  display: none
+  width: 300px
+  height: 100px
+  padding-top: 40px
+  font-size: 23px
+  color: #ffff
+  background-color: #FFD600
+  border-radius: 10px
+  justify-content: center
+  text-align: center
+  &_close
+    position: absolute
+    top: 10px
+    left: 0
+#modal_add_close, .modal_edit_close
+  position: absolute
+  top: 20px
+  width: 40px
+  height: 40px
+  cursor: pointer
+.form__add , .form__edit
+  font-size: 18px
+  padding-top: 30px
+  display: flex
+  flex-direction: column
+  align-items: end
+  padding-right: 30px
+  input, label
+    margin-top: 15px
+  input
+    margin-left: 8px
+    height: 40px
+    font-size: 18px
+button
+  width: 223px
+  height: 50px
+  font-size: 20px
+  border: none
+  background-color: yellow
+  cursor: pointer
+  margin-top: 15px

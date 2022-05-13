@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banks</title>
+    <link rel="stylesheet" href="css/styles.min.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <template id="card_template">
+    <div class="bank__block">
+    <div class="images">
+        <div><img class="edit" src="img/edit_2.svg" alt="edit" onclick="edited(this)"></div>  
+        <div><img class="delete" src="img/delete.svg" alt="delete" onclick="deleted(this)"></div>
+    </div>
+    <div class="bank__name"><div>Name:</div><div class="templ_name">{{name}}</div></div>
+    <div class="bank__interestRate"><div>Interest Rate (%): </div> <div class="templ_interestRate">{{interestRate}}</div> </div>
+    <div class="bank__maxLoan"><div>Maximum Loan ($):</div><div class="templ_maxLoan">{{maxLoan}}</div></div>
+    <div class="bank__minDownPayment"><div>Minimum Down Payment (%):</div><div class="templ_minDownPayment">{{minDownPayment}}</div></div>
+    <div class="bank__loanTerm"><div>Loan Term (month):</div><div class="templ_loanTerm">{{loanTerm}}</div></div>
+    </div> 
+    </template>
+    <div class="container">
+        <div class="add">
+            <div class="add__title">Create New Bank</div>
+            <img src="img/cross_1.svg" alt="add" class="add__img">
+        </div>
+        <div class="calculator">
+            <button id="calculator">Go to the Mortgage calculator</button>
+        </div>
+        <div class="banks"></div>
+        <div class="modal_add">
+            <img src="img/cross.svg " alt="cross " class="modal_add_close " onclick='closed(this)'> New bank was created. <br>You can edit it.
+        </div>
+        <div class="modal_edit">
+            <img src="img/cross.svg " alt="cross " class="modal_edit_close " onclick='closed(this)'>
+            <form action="# " class="form__edit " id="form_edit">
+                <label> Name
+                <input type="text" class="input__name" id="input__name" name="name" required></label>
+                <label> Interest Rate (%) <input type="text " class="input__interestRate" id="input__interestRate" name="interestRate" required> </label>
+                <label>Maximum Loan ($)<input type="text " class="input__maxLoan" id="input__maxLoan" name="maxLoan" required></label>
+                <label>Minimum Down Payment (%)<input type="text " class="input__minDownPayment" id="input__minDownPayment" name="minDownPayment" required></label>
+                <label>Loan Term (month)<input type="text" class="input__loanTerm" id="input__loanTerm" name="loanTerm" required></label>
+                <button id="submit__edit">Edit bank</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/script.js "></script>
+
+
+
+</body>
+
+</html>
