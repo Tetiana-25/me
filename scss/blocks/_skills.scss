@@ -1,0 +1,84 @@
+.skills {
+    padding-top: 156px;
+    &__item-wrapper {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(4, 270px);
+        grid-template-rows: repeat(2, 270px);
+        grid-auto-rows: 270px;
+        column-gap: 13px;
+        row-gap: 13px;
+    }
+    .skill__item {
+        border: 1px solid #000000;
+        padding: 30px;
+    }
+    .skill__title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 21px;
+        margin-top: 20px;
+    }
+    .skill__descr {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        margin-top: 15px;
+    }
+    .skill__mongo {
+        margin-top: 38px;
+    }
+    .skill__jquery {
+        margin-top: 42px;
+    }
+}
+
+.skills__values {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: repeat(2, 70px);
+    grid-auto-rows: 70px;
+    column-gap: 45px;
+    row-gap: 30px;
+    margin-top: 120px;
+    &-item {
+        display: grid;
+        grid-template-columns: 300px 40px;
+        grid-template-rows: 50px 20px;
+        &-title {
+            position: relative;
+            @include before_circle;
+            &:before {
+                top: 2px;
+            }
+            padding-left: 13px;
+            padding-top: 7px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 21px;
+        }
+        &-value {
+            font-size: 14px;
+            padding-top: 7px;
+            line-height: 21px;
+        }
+    }
+    &__blocks {
+        position: relative;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        .block_all {
+            width: 100%;
+            height: 14px;
+            background: #E8E4DE;
+            border-radius: 4px;
+        }
+        .block_result {
+            background: #FFA501;
+            border-radius: 4px;
+            height: 14px;
+            position: absolute;
+            top: 0;
+        }
+    }
+}
